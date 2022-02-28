@@ -5,7 +5,6 @@ ruby '2.5.7'
 
 gem 'pg'
 gem 'pry'
-gem 'rspec'
 gem 'rubocop'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
@@ -53,6 +52,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem "rspec-collection_matchers"
+  gem "rspec-rails", "~> 4.0.2"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
