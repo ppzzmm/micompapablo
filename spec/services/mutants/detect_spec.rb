@@ -19,7 +19,7 @@ describe Mutants::Detect do
   end
 
   context 'when the DNA is not valid' do
-    it 'creates a quotation if the entity has not a active quotation' do
+    it 'returns an error' do
       result = described_class.run(nil)
       expect(result.success?).to be(false)
       expect(result.error_message).to eq('The data is not DNA.')
@@ -27,7 +27,7 @@ describe Mutants::Detect do
   end
 
   context 'when the DNA is from human' do
-    it 'creates a quotation if the entity has not a active quotation' do
+    it 'returns an error' do
       result = described_class.run(human_dna)
       expect(result.success?).to be(false)
       expect(result.error_message).to eq('It is not mutant.')
