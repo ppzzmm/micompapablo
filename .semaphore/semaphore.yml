@@ -1,0 +1,31 @@
+version: v1.0
+name: Micompappablo CI/CD pipeline
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+blocks:
+  - name: Install dependencies ⬇️
+    task:
+      prologue:
+        commands:
+          - sem-version ruby 2.5.7 -f
+      jobs:
+        - name: bundle install
+          commands:
+            - checkout
+            - cache restore
+            - bundle install
+            - cache store
+  - name: "Code analysis \U0001F50E"
+    task:
+      prologue:
+        commands:
+          - sem-version ruby 2.5.7 -f
+          - checkout
+          - cache restore
+          - bundle install
+      jobs:
+        - name: bundle exec rubocop
+          commands:
+            - bundle exec rubocop
