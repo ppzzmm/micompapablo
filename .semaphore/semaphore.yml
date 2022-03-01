@@ -33,7 +33,7 @@ blocks:
     task:
       prologue:
         commands:
-          - sem-version ruby 3.0.2 -f
+          - sem-version ruby 2.5.7 -f
           - checkout
           - cache restore
           - bundle install
