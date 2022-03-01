@@ -20,7 +20,7 @@ Metrics/CyclomaticComplexity:
 # Offense count: 2
 # Configuration parameters: CountComments, CountAsOne, ExcludedMethods, IgnoredMethods.
 Metrics/MethodLength:
-  Max: 12
+  Max: 23
 
 # Offense count: 1
 # Configuration parameters: IgnoredMethods.
@@ -32,22 +32,12 @@ Metrics/PerceivedComplexity:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: nested, compact
 Style/ClassAndModuleChildren:
-  Exclude:
-    - 'app/controllers/api/v1/base_controller.rb'
-    - 'app/controllers/api/v1/mutants_controller.rb'
-    - 'test/channels/application_cable/connection_test.rb'
-    - 'test/test_helper.rb'
+  Enabled: false
 
 # Offense count: 4
 # Configuration parameters: AllowedConstants.
 Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/controllers/api/v1/mutants_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/models/application_record.rb'
-    - 'config/application.rb'
+  Enabled: false
 
 # Offense count: 38
 # Cop supports --auto-correct.
@@ -88,3 +78,13 @@ Style/SpecialGlobalVars:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 198
+
+# Offense count: 686
+# Configuration parameters: CountComments, ExcludedMethods.
+# ExcludedMethods: refine
+Metrics/BlockLength:
+  Max: 366
+  
+# Offense count: 278
+Metrics/AbcSize:
+  Max: 77

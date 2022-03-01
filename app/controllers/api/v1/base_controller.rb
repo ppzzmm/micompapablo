@@ -11,7 +11,7 @@ class Api::V1::BaseController < ApplicationController
   end
 
   def response_error(args = {})
-    opts = { code: 420 }.merge(args)
+    opts = { code: 403 }.merge(args)
     opts[:message] ||= t("api.http_response.errors.error_#{opts[:code]}")
 
     render status: opts[:code], json: {
