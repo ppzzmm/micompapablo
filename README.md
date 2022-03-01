@@ -54,7 +54,7 @@ To save the good practics, style guides and avoid code smell, this project uses 
 $ make rubocop
 ```
 ## Live Demo
-Micmpapablo is hosted in Heroku in this route:
+Micompapablo is hosted in Heroku in this route:
 ```bash
 https://pablomicompa.herokuapp.com/
 ```
