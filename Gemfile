@@ -52,6 +52,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'json_matchers'
   gem 'rspec-collection_matchers'
   gem 'rspec-rails', '~> 4.0.2'
   gem 'webdrivers'

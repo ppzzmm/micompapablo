@@ -1,0 +1,7 @@
+{
+  "dna": {
+    "count_mutant_dna": { "type": "integer" },
+    "count_human_dna": { "type": "integer" },
+    "ratio": { "type": "integer" }
+  }
+}
